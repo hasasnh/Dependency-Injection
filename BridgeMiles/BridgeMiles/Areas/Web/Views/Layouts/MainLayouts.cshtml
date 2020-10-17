@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    @{Html.RenderPartial("~/Areas/Web/Views/Partial/Main/Scripts/MainScripts.cshtml");}
+    <title>MainLayouts</title>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Students Reports", "StudentsAttendance", "StudentsReports")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        @RenderBody();
+        <hr />
+        @{Html.RenderPartial("~/Areas/Web/Views/Partial/Main/Footers/MainFooter.cshtml");}
+    </div>
+</body>
+</html>
